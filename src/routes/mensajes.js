@@ -13,7 +13,7 @@ mensajeRouter.get('/mensajes/:id', getMensajeById)
 mensajeRouter.post('/mensajes', createMensaje)
 
 //update product
-mensajeRouter.patch('/mensajes/:id', updateMensaje)
+mensajeRouter.put('/mensajes/:id', updateMensaje)
 
 //delete product
 mensajeRouter.delete('/mensajes/:id', deleteMensaje)
