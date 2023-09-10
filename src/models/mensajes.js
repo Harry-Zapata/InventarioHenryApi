@@ -7,6 +7,7 @@ const mensajeSchema = new Schema({
     },
     checked: {
         type: Boolean,
+        default: false
     },
 }
 )
