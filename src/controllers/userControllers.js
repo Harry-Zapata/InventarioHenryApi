@@ -25,9 +25,9 @@ const showUser = async (req, res) => {
 
 const updateUser = (req, res) => {
     const { id } = req.params
-    const { email, password, name, phone, address } = req.body
+    const { email, password, name, phone, address, role } = req.body
     userSchema
-      .updateOne({ _id: id }, { $set: {email, password, name, phone, address} })
+      .updateOne({ _id: id }, { $set: {email, password, name, phone, address, role} })
       .then((data) => res.json(data))
       .catch((error) => res.json({ message: error.message }))
 }
