@@ -32,8 +32,25 @@ const updateUser = (req, res) => {
       .catch((error) => res.json({ message: error.message }))
 }
 
+const showAllUser = (req, res) => {
+    userSchema
+      .find()
+      .then((data) => res.json(data))
+      .catch((error) => res.json({ message: error.message }))
+}
+
+const deleteUser = (req, res) => {
+    const { id } = req.params
+    userSchema
+      .deleteOne({ _id: id })
+      .then((data) => res.json(data))
+      .catch((error) => res.json({ message: error.message }))
+}
+
 module.exports = {
+    showAllUser,
     createUser,
     showUser,
-    updateUser
+    updateUser,
+    deleteUser
 }
