@@ -5,7 +5,7 @@ const mensajeSchema = new Schema({
     description: {
         type: String,
     },
-    checket: {
+    checked: {
         type: Boolean,
     },
 }
