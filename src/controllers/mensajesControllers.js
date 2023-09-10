@@ -27,9 +27,9 @@ const createMensaje = async (req, res) =>{
 
 const updateMensaje = async (req, res) => {
     const { id } = req.params
-    const { description, checket} = req.body
+    const { description, checked} = req.body
     mensajeSchema
-      .updateOne({ _id: id }, { $set: {description, checket} })
+      .updateOne({ _id: id }, { $set: {description, checked} })
       .then((data) => res.json(data))
       .catch((error) => res.json({ message: error.message }))
 }
